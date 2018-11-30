@@ -135,6 +135,26 @@ Properties:
 {$\mathcal{O}(n \log n), \mathcal{O}(1)$}
 {cpp}{source/data_structures/sparse_table.cpp}
 
+\Algorithm
+{Order statistic tree}
+{A set (not multiset!) with support for finding the n'th element, and finding the index of an element.To get a map, change $\texttt{null\_type}$}
+{Query – $\mathcal{O}(\log n)$}
+{cpp}{source/data_structures/order_statistic_tree.cpp}
+
+\Algorithm
+{HashMap}
+{Hash map with the same API as unordered map, but ∼3x faster. Initial capacity must be a power of 2 (if provided).}
+{Query – $\mathcal{O}(1)$}
+{cpp}{source/data_structures/hash_map.cpp}
+
+\Algorithm
+{Line Container}
+{Container where you can add lines of the form $kx+m$, and query maximum values at points $x$. Useful for dynamic programming.}
+{$\mathcal{O}(\log n)$}
+{cpp}{source/data_structures/line_container.cpp}
+
+
+
 
 
 \section{Strings}
