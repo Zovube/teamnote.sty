@@ -23,6 +23,7 @@
 % Make Pagebreak if you want.
 % \pagebreak 
 
+
 \section{Templates}
 
 \Algorithm
@@ -305,6 +306,28 @@ double xmin = gss(-1000,1000,func);}
     \end{gather}
 }
 
+\Formula
+{Langrange polynom}
+{
+    $L(x) = \sum_{i=0}^{n} y_{i} l_{i} (x)$ \\
+    $l_{i} (x) = \prod_{j=0,\ j \neq i}^{n} \frac{x - x_{j}}{x_{i} - x_{j}}$ \\
+    Properties: $l_{i} (x_{i}) = 1; l_{i} (x_{j}) = 0, i \neq j$
+}
+
+\Formula
+{Svyat formulas}
+{
+    $\int_{a}^{b} f(x) dx = \frac{b - a}{6} (f(a) + 4 f(\frac{a + b}{2}) + f(b)) $ \\
+    Catalan numbers $C_{n} = \frac{1}{n+1} C_{2n}^{n} $ \\
+    Stirling numbers of the $1^{st}$ kind: $s_{n, k} = s_{n - 1, k - 1} + (n - 1) s_{n - 1, k}$ \\
+    Stirling numbers of the $2^{nd}$ kind: $s_{n, k} = s_{n - 1, k - 1} + k s_{n - 1, k}$, where $s_{n, 1} = s_{n, n} = 1$ \\
+    Wilson's theore-MEMES $p$ - prime, $(p - 1)! = - 1,\ mod\ p$ \\
+    Taylor XD Series: $f(x) = \sum_{k=0}^{\infty} \frac{(x - a)^{k}}{k!} f^{(k)}(a)$ 
+}
+
+
+
+
 % TODO: Serega, add your own shit here
 \section{Geometry}
 
@@ -329,25 +352,6 @@ double xmin = gss(-1000,1000,func);}
 {
     $r = \sqrt{x^{2} + y^{2} + z^{2}}, \theta = arccos(\frac{z}{r}), \phi = \arctan(\frac{y}{x})$ \\
     $x = r sin \theta cos \phi, y = r sin \theta \sin \phi, z = r cos \theta$ \\ 
-}    
-
-\Formula
-{Langrange polynom}
-{
-    $L(x) = \sum_{i=0}^{n} y_{i} l_{i} (x)$ \\
-    $l_{i} (x) = \prod_{j=0,\ j \neq i}^{n} \frac{x - x_{j}}{x_{i} - x_{j}}$ \\
-    Properties: $l_{i} (x_{i}) = 1; l_{i} (x_{j}) = 0, i \neq j$
-}
-
-\Formula
-{Svat formulas}
-{
-    $\int_{a}^{b} f(x) dx = \frac{b - a}{6} (f(a) + 4 f(\frac{a + b}{2}) + f(b)) $ \\
-    Catalan numbers $C_{n} = \frac{1}{n+1} C_{2n}^{n} $ \\
-    Stirling numbers of the $1^{st}$ kind: $s_{n, k} = s_{n - 1, k - 1} + (n - 1) s_{n - 1, k}$ \\
-    Stirling numbers of the $2^{nd}$ kind: $s_{n, k} = s_{n - 1, k - 1} + k s_{n - 1, k}$, where $s_{n, 1} = s_{n, n} = 1$ \\
-    Wilson's theore-MEMES $p$ - prime, $(p - 1)! = - 1,\ mod\ p$ \\
-    Taylor XD Series: $f(x) = \sum_{k=0}^{\infty} \frac{(x - a)^{k}}{k!} f^{(k)}(a)$ 
 }
 
 \Formula
