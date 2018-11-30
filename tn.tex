@@ -44,6 +44,15 @@
 {$\mathcal{O}(1)\ for\ all\ tasks$}
 {java}{source/templates/solution.java}
 
+\Algorithm
+{Any troubleshoots?}
+{ix ay way}
+{}
+{text}{source/troubleshoot.txt}
+
+
+
+
 \section{Graphs}
 
 \Algorithm
@@ -86,7 +95,15 @@
 {Dijkstra with POTs}
 {Is it really pot? seems like not}
 {$\mathcal{O}(N\ M + N\ E\ logN)$}
-{cpp}{source/graphs/dijkstra_pot.cpp.cpp}
+{cpp}{source/graphs/dijkstra_pot.cpp}
+
+\Algorithm
+{MinCut}
+{After running max-flow, the left side of a min-cut from $s$ to $t$ is given by all vertices reachable from $s$, only traversing edges with positive residual capacity.}
+{}
+{cpp}{}
+
+
 
 
 \section{Data Structures}
@@ -279,6 +296,20 @@ it means that maximal odd palindrome located on $[i - len, i + len]$
 {Find $a x + b y = gcd(a, b)$}
 {$\mathcal{O}(Good\ log\ max(A, B))$}
 {cpp}{source/math/ext_gcd.cpp}
+
+\Algorithm
+{Miller Rabin primality probabilistic test}
+{Probability of failing one iteration is at most 1/4. 15 iterations should be enough for 50-bit numbers.}
+{15 times the complexity of $a^b \mod c$ (.)(.)}
+{cpp}{source/math/miller_rabin_is_prime.cpp}
+
+\Algorithm
+{Factorization. Rho-Pollard method}
+{Pollard's rho algorithm. It is a probabilistic factorisation algorithm, whose expected time complexity is good. Before you start using it, run {\tt init(bits)}, where bits is the length of the numbers you use. Returns factors of the input without duplicates.}
+{$\mathcal{O}(n^{\frac{1}{4}})$}
+{cpp}{source/math/rho_pollard.cpp}
+
+
 
 \Algorithm
 {Golden section search}
