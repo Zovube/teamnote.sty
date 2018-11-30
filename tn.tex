@@ -296,6 +296,14 @@ it means that maximal odd palindrome located on $[i - len, i + len]$
 }    
 
 \Formula
+{Langrange polynom}
+{
+    $L(x) = \sum_{i=0}^{n} y_{i} l_{i} (x)$ \\
+    $l_{i} (x) = \prod_{j=0,\ j \neq i}^{n} \frac{x - x_{j}}{x_{i} - x_{j}}$ \\
+    Properties: $l_{i} (x_{i}) = 1; l_{i} (x_{j}) = 0, i \neq j$
+}
+
+\Formula
 {Rotation matrix by axis}
 { $ M = 
 	\left ( 
