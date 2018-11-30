@@ -108,6 +108,13 @@
 {$\mathcal{O}(n \log n), \mathcal{O}(1)$}
 {cpp}{source/data_structures/sparse_table.cpp}
 
+% CAN REMOVE IT
+\Algorithm
+{Heavy-light}
+{Implementation by Jesus-Svyat}
+{Building - $\mathcal{O}(n)$, Min/Max/Lca query – $\mathcal{O}(\log^2 n)$}
+{cpp}{source/data_structures/heavy_light.cpp}
+
 \Algorithm
 {Centroid Decomposition}
 {Store something in centroids for example pair with distance to other vertices & etc.
@@ -127,6 +134,26 @@ Properties:
 }
 {$\mathcal{O}(n \log n), \mathcal{O}(1)$}
 {cpp}{source/data_structures/sparse_table.cpp}
+
+\Algorithm
+{Order statistic tree}
+{A set (not multiset!) with support for finding the n'th element, and finding the index of an element.To get a map, change $\texttt{null\_type}$}
+{Query – $\mathcal{O}(\log n)$}
+{cpp}{source/data_structures/order_statistic_tree.cpp}
+
+\Algorithm
+{HashMap}
+{Hash map with the same API as unordered map, but ∼3x faster. Initial capacity must be a power of 2 (if provided).}
+{Query – $\mathcal{O}(1)$}
+{cpp}{source/data_structures/hash_map.cpp}
+
+\Algorithm
+{Line Container}
+{Container where you can add lines of the form $kx+m$, and query maximum values at points $x$. Useful for dynamic programming.}
+{$\mathcal{O}(\log n)$}
+{cpp}{source/data_structures/line_container.cpp}
+
+
 
 
 
@@ -251,6 +278,16 @@ it means that maximal odd palindrome located on $[i - len, i + len]$
 {Find $a x + b y = gcd(a, b)$}
 {$\mathcal{O}(Good\ log\ max(A, B))$}
 {cpp}{source/math/ext_gcd.cpp}
+
+\Algorithm
+{Golden section search}
+{Finds the argument minimizing the function $f$ in the interval $[a,b]$ assuming $f$ is unimodal on the interval, i.e. has only one local minimum. The maximum error in the result is $eps$. Works equally well for maximization with a small change in the code. See TernarySearch.h in the Various chapter for a discrete version.
+
+double func(double x) { return 4+x+.3*x*x; }
+
+double xmin = gss(-1000,1000,func);}
+{$\mathcal{O}(\log((b-a) / \epsilon))$}
+{cpp}{source/math/golden_section_search.cpp}
 
 % TODO: add formulae for power sums
 \Formula

@@ -1,4 +1,4 @@
-int lp[N+1];
+int lp[N + 1];
 vi pr;
 for (int i = 2; i <= N; i++) {
 	if (lp[i] == 0) {
