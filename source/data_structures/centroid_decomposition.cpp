@@ -23,7 +23,8 @@ void build(int v)
 {
 	int tree_size = get_size(v, -1);
 	v = findCentroid(v, -1, sz);
-	process(v); // например, в этой функции можно запомнить для каждой вершинки компоненты центроид v
+	// calculate something for centroid
+	process(v);
 	used[v] = true;
 	for (auto to : g[v])
 		if (!used[to])
