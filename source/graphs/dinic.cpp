@@ -35,7 +35,7 @@ ll getBlockingFlow(int v, ll curFlow) {
 	for(int &id = firstEdgeTmp[v]; id != -1; id = nextEdge[id]) {
 		int to = edgeTo[id];
 		if(vertexLevel[to] != vertexLevel[v] + 1 || !edgeCap[id]) continue;
-		ll newFlow = getBlockingFlow(to, min(edgeCap[id], curFlow));
+		ll newFlow = getBlockingFlow(to, min((ll)edgeCap[id], curFlow));
 		if(newFlow) {
 			edgeCap[id] -= newFlow, edgeCap[id ^ 1] += newFlow;
 			return newFlow;
