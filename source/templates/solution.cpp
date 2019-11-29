@@ -1,3 +1,6 @@
+#pragma GCC optimize("O33")
+#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx")
+#define __USE_MINGW_ANSI_STDIO 0
 #include <bits/stdc++.h>
 using namespace std;
 
