@@ -6,8 +6,8 @@ struct BIT {
 	// initialize BIT and calculate mxlog for binsearch
 	void init(int nn) {
 		mxlog = 0;
-		while((1 << mxlog) < nn) mxlog++; 
-		size = (1 << mxlog) + 1;
+		while(two(mxlong) < nn) mxlog++;
+		size = two(mxlog) + 1;
 		dataMul.resize(size);
 		dataAdd.resize(size);
 	}
@@ -45,12 +45,12 @@ struct BIT {
 	 int kth(ll k) {
 	 	int res = 0;
 		for(int i = mxlog; i >= 0; i--) {
-			if(dataAdd[res + (1 << i) - 1] < k) {	
-				k -= dataAdd[res + (1 << i) - 1];
-				res += ((1 << i));
+			if(dataAdd[res + two(i) - 1] < k) {
+				k -= dataAdd[res + two(i) - 1];
+				res += two(i);
 			}
 		}
 		return res;	
 	 }
 	 	 
-} bit; 
+} bit;
